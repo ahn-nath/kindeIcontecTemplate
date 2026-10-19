@@ -1,6 +1,6 @@
 "use server";
 
-import { getKindeWidget } from "@kinde/infrastructure";
+import { getKindeWidget, getLogoUrl } from "@kinde/infrastructure";
 import React from "react";
 
 type WidgetProps = {
@@ -13,7 +13,7 @@ export const Widget: React.FC<WidgetProps> = ({ heading }) => {
       <aside className="ico-sidepanel">
         <img
           className="ico-sidepanel-logo"
-          src="https://portalafiliados.icontec.org/wp-content/uploads/2026/10/logoAnimated.gif"
+          src={getLogoUrl()}
           alt=""
           aria-hidden="true"
         />
