@@ -1,6 +1,10 @@
 "use server";
 
-import { getKindeLoginUrl, getKindeRegisterUrl } from "@kinde/infrastructure";
+import {
+  getKindeLoginUrl,
+  getKindeRegisterUrl,
+  getLogoUrl,
+} from "@kinde/infrastructure";
 import React from "react";
 
 export const Header = (props: { page: "login" | "register" }) => {
@@ -11,7 +15,7 @@ export const Header = (props: { page: "login" | "register" }) => {
       <a className="ico-brand" href="#" aria-label="ICONTEC">
         <img
           className="ico-brand-logo"
-          src="http://portalafiliados.icontec.org/wp-content/uploads/2026/10/icontec_logo_24-1.png"
+          src={getLogoUrl()}
           alt="Logo ICONTEC"
         />
       </a>
